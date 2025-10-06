@@ -1,0 +1,9 @@
+root
+msfadmin
+user
+service
+postgres
+mysql
+tomcat55
+bind
+distccd

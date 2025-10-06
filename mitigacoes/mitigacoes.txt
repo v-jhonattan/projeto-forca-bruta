@@ -1,0 +1,5 @@
+=== MEDIDAS DE MITIGAÇÃO ===
+1. Políticas de senha complexas
+2. Autenticação multi-fator
+3. Limitar tentativas de login
+4. Monitorar logs de autenticação

