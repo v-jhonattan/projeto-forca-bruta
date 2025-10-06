@@ -98,11 +98,8 @@ Resultado:
     ✅ ACCOUNT FOUND: [smbnt] Host: 192.168.122.128 User: msfadmin Password: msfadmin [SUCCESS (ADMIN$ - Access Allowed)]
 
 
-📊 Resultados Obtidos
-Serviço	Credenciais Comprometidas	Nível de Acesso	Tempo
-FTP	1	Usuário normal	~30s
-HTTP/DVWA	5	Aplicação web	~45s
-SMB	1	Acesso ADMIN	~60s
+## 📊 Resultados Obtidos
+
 Estatísticas
 
     - Total de credenciais comprometidas: 3
